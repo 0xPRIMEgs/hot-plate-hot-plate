@@ -9,8 +9,19 @@ function img(s){
 
 // --- Input ---
 const keys = []
-window.addEventListener("keydown", (e) => { keys[e.key.toLowerCase()] = true });
-window.addEventListener("keyup", (e) => { keys[e.key.toLowerCase()] = false });
+const prev_keys = []
+const just_keys = []
+window.addEventListener("keydown", (e) => {
+    keys[e.key.toLowerCase()] = true   
+});
+window.addEventListener("keyup", (e) => { keys[e.key.toLowerCase()] = false; });
+
+function handleJustKeys() {
+    for (const key in keys) {
+        just_keys[key] = (!prev_keys[key] && keys[key]);
+        prev_keys[key] = keys[key];
+    }
+}
 
 // --- Screen superclass ---
 class Screen {

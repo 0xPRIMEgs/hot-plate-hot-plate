@@ -4,9 +4,14 @@ class TitleScreen extends Screen {
   }
 
   update(dt) {
+    handleJustKeys();
     // WSAD movement
     if (keys["enter"]){
       currentScreen = screens[1];
+    }
+
+    if(just_keys["e"]){
+      console.log("just key test")
     }
   }
   
