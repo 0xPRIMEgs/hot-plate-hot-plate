@@ -1,4 +1,4 @@
-const screens = [new ExploreScreen(), new BattleScreen()];
+const screens = [new TitleScreen(), new ExploreScreen(), new BattleScreen()];
 screens.forEach(s => s.init());
 
 var currentScreen = screens[0];

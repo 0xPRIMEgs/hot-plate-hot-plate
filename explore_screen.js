@@ -21,7 +21,7 @@ class ExploreScreen extends Screen {
     this.player.x = Math.max(r, Math.min(canvas.width - r, this.player.x));
     this.player.y = Math.max(r, Math.min(canvas.height - r, this.player.y));
   }
-  
+
   render(ctx) {
     const bg = this.showAltBg ? this.img_bg2 : this.img_bg1;
     ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
@@ -35,6 +35,6 @@ class ExploreScreen extends Screen {
     // UI hint
     ctx.fillStyle = "rgba(255,255,255,0.85)";
     ctx.font = "14px monospace";
-    ctx.fillText("WASD to move, E to toggle background", 12, 24);
+    ctx.fillText("WASD to move, E to toggle background", 240, 24);
   }
 }
